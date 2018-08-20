@@ -8,7 +8,6 @@ module.exports = function(wallaby) {
     ],
 
     tests: [
-      // 'src/**/__tests__/*.js',
       'src/App.test.js',
     ],
 
@@ -21,21 +20,10 @@ module.exports = function(wallaby) {
 
     compilers: {
       '**/*.js': wallaby.compilers.babel({
-        babelrc: true
-        // presets: [
-        //   'react-native',
-        //   'react-native-stage-0/decorator-support',
-        // ],
-        // plugins: [
-        //   'transform-flow-strip-types',
-        //   'transform-object-rest-spread',
-        //   'transform-async-to-generator',
-        // ],
+        presets: [
+          'react-native',
+        ],
       }),
     },
-
-    // setup: (wallaby) => {
-    //   wallaby.testFramework.configure(require('./package.json').jest);
-    // },
   };
 };
